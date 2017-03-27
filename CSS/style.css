@@ -1,0 +1,15 @@
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+table {
+	height: 700px;
+
+}
+tr {
+
+}
+td {
+	border: 5px solid black;
+}
