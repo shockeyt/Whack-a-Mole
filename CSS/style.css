@@ -8,8 +8,14 @@ table {
 
 }
 tr {
-
+	height: 200px;
 }
 td {
 	border: 5px solid black;
+}
+.test {
+	background-color: red;
+	border: 3px solid blue;
+	height: 100px;
+	margin: 0 auto;
 }
