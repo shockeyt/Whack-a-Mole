@@ -13,8 +13,10 @@ function addDiv() {
 addDiv();
 function clickDiv() {
 	test.addEventListener("click", function() {
-		// var cellmove = document.getElementById('id6')
+		
 		celltest.removeChild(test);
+		var cellmove = document.getElementById('id6');
+		cellmove.appendChild(test);
 		alert("clicked test div");
 	});
 }
