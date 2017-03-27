@@ -1,14 +1,21 @@
 .container {
 	margin: 0 auto;
 	width: 80%;
+	text-align: center;
 }
-
+h1 {
+	text-align: center;
+}
+.go {
+	display: inline-block;
+	margin: 0 auto;
+}
 table {
 	height: 700px;
 
 }
 tr {
-	height: 200px;
+	height: 100px;
 }
 td {
 	border: 5px solid black;
@@ -16,6 +23,6 @@ td {
 .test {
 	background-color: red;
 	border: 3px solid blue;
-	height: 100px;
+	height: 50px;
 	margin: 0 auto;
 }
