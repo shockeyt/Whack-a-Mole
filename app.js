@@ -23,26 +23,39 @@ function startGame() {
 startGame();
 
 function clickDiv() {
+
 	test.addEventListener("click", function() {
+
 		setInterval(function(){ 
 			// celltest.removeChild(test);
+			var numtest =  Math.floor((Math.random() * 25) + 1);
+			var numid = 'id' + String(numtest);
+			var table = document.getElementById(numid);
+			var newdiv = document.createElement("div");
+			
 			function generate() {
-				var numtest =  Math.floor((Math.random() * 25) + 1);
-				var numid = 'id' + String(numtest);
+				// var numtest =  Math.floor((Math.random() * 25) + 1);
+				// var numid = 'id' + String(numtest);
 				console.log(numtest);
 				console.log(numid);
 				
-				var table = document.getElementById(numid);
-				var newdiv = document.createElement("div");
+				// var table = document.getElementById(numid);
+				// var newdiv = document.createElement("div");
 				newdiv.setAttribute('id', numid);
 				newdiv.className = 'test';
 				console.log(newdiv);
 				table.appendChild(newdiv);
+				newdiv.addEventListener("click", function() {
+					// alert("newdiv has been clicked");
+					table.removeChild(newdiv);
+				})
 			}
 			generate();
+			// table.removeChild(newdiv);
 		}, 3000);	
 		// var cellmove = document.getElementById('id6');
 		celltest.removeChild(test);
+		
 		// alert("clicked test div");
 	});
 }
