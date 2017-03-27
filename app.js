@@ -5,16 +5,17 @@ var test = document.createElement("div");
 test.className = "test";
 // console.log(test);
 
-var celltest = document.getElementById('id1');
-function addDiv() {
-	// var celltest = document.getElementById('id1');
-	celltest.appendChild(test);
-	console.log(celltest);
-} 
-addDiv();
+// var celltest = document.getElementById('id1');
+// function addDiv() {
+// 	// var celltest = document.getElementById('id1');
+// 	celltest.appendChild(test);
+// 	console.log(celltest);
+// } 
+// addDiv();
 
 var go = document.querySelector('.go');
-console.log(go);
+// console.log(go);
+//need startGame to engage clickDiv()
 function startGame() {
 	go.addEventListener("click", function() {
 		alert("go button pushed");
@@ -24,7 +25,7 @@ startGame();
 
 function clickDiv() {
 
-	test.addEventListener("click", function() {
+	go.addEventListener("click", function() {
 
 		setInterval(function(){ 
 			// celltest.removeChild(test);
@@ -54,9 +55,10 @@ function clickDiv() {
 			// table.removeChild(newdiv);
 		}, 3000);	
 		// var cellmove = document.getElementById('id6');
-		celltest.removeChild(test);
+		// celltest.removeChild(test);
 		
-		// alert("clicked test div");
+		//stops set interval from generating
+		clearInterval();
 	});
 }
 clickDiv();
