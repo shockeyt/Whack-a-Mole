@@ -31,3 +31,8 @@ td {
 	height: 50px;
 	margin: 0 auto;
 }
+
+#timer {
+	height:100px;
+	background-color: lightblue;
+}

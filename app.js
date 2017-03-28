@@ -1,8 +1,8 @@
 console.log("js is working");
 
 
-var test = document.createElement("div");
-test.className = "test";
+// var test = document.createElement("div");
+// test.className = "test";
 // console.log(test);
 
 // var celltest = document.getElementById('id1');
@@ -16,17 +16,48 @@ test.className = "test";
 var go = document.querySelector('.go');
 // console.log(go);
 //need startGame to engage clickDiv()
-function startGame() {
-	go.addEventListener("click", function() {
-		// alert("go button pushed");
-	})
+// function startGame() {
+// 	go.addEventListener("click", function() {
+// 		// alert("go button pushed");
+// 	})
+// }
+// startGame();
+
+var timediv = document.querySelector('#timer');
+//countdown timer
+var time = 30;
+var t;
+function timer() {
+	t = setTimeout(function() {
+		time --;
+		timediv.innerHTML = time;
+		timer();
+	}, 1000); 
+	timeZero();
+	console.log(timediv);
 }
-startGame();
+function timeZero() {
+	if (time === 0) {
+		alert("times up");
+		stopTime();
+	}
+}
+function stopTime() {
+	clearTimeout(t);
+	time = 30;
+}
+
+function startGame(){
+			timer();
+			console.log(time);
+		}
+// startGame();
 
 function clickDiv() {
 
 	go.addEventListener("click", function() {
 
+		startGame();
 		setInterval(function(){ 
 			// celltest.removeChild(test);
 			var numtest =  Math.floor((Math.random() * 25) + 1);
@@ -58,7 +89,8 @@ function clickDiv() {
 				mole.className = 'test';
 				console.log(mole);
 				table.appendChild(mole);
-				timeStart();
+				timeStart()
+				;
 				
 				mole.addEventListener("click", function() {
 					// alert("mole has been clicked");
