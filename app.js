@@ -33,11 +33,19 @@ function clickDiv() {
 			var numid = 'id' + String(numtest);
 			var table = document.getElementById(numid);
 			var newdiv = document.createElement("div");
-			var timeout = function() {
-					setTimeout(function() {
-						alert("timeout working");
-					}, 1000);
+			var time;
+			function timeStart() {
+				time = setTimeout(function() {
+						// alert("timeout working");
+						table.removeChild(newdiv);
+					}, 2000);
 				}
+			function timeStop() {
+				clearTimeout(time);
+			}
+			// var stoptime = function() {
+			// 	clearTimeout()
+			// }
 			function generate() {
 				// var numtest =  Math.floor((Math.random() * 25) + 1);
 				// var numid = 'id' + String(numtest);
@@ -50,14 +58,16 @@ function clickDiv() {
 				newdiv.className = 'test';
 				console.log(newdiv);
 				table.appendChild(newdiv);
-
-				timeout();
+				timeStart();
+				
 				newdiv.addEventListener("click", function() {
 					// alert("newdiv has been clicked");
+					timeStop();
 					var input = document.getElementById('mybox');
     				mybox.value = parseInt(mybox.value, 10) + 1;
 					table.removeChild(newdiv);
 				})
+				
 			}
 			
 			
