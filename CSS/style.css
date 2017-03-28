@@ -1,3 +1,7 @@
+body {
+	background-image: url("../CSS/Images/lawn.jpg");
+	background-size: cover;
+}
 .container {
 	margin: 0 auto;
 	width: 80%;
@@ -17,22 +21,38 @@ h1 {
 }
 table {
 	height: 700px;
-
-}
-tr {
-	height: 100px;
-}
-td {
-	border: 5px solid black;
-}
-.test {
-	background-color: red;
-	border: 3px solid blue;
-	height: 50px;
 	margin: 0 auto;
 }
+tr {
+	height: 140px;
+}
+td {
+	background-image: url("../CSS/Images/dirt-hole.png");
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	/*border: 5px solid black;*/
 
+}
+.mole {
+	/*background-color: red;
+	border: 3px solid blue;*/
+	background-image: url("../CSS/Images/mole.png");
+	background-size: 120px;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 117px;
+	margin: 0 auto;
+}
+.molesize {
+	background-image: url("../CSS/Images/mole.png");
+	background-size: 120px;
+	background-repeat: no-repeat;
+	height: 100px;
+}
 #timer {
-	height:100px;
+	display: block;
+	height:50px;
+	width: 30%;
 	background-color: lightblue;
 }

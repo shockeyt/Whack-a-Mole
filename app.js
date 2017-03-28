@@ -86,7 +86,7 @@ function clickDiv() {
 				// var table = document.getElementById(numid);
 				// var mole = document.createElement("div");
 				mole.setAttribute('id', numid);
-				mole.className = 'test';
+				mole.className = 'mole';
 				console.log(mole);
 				table.appendChild(mole);
 				timeStart()
