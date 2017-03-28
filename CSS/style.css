@@ -1,3 +1,6 @@
+* {
+	font-family: 'Press Start 2P', cursive;
+}
 body {
 	background-image: url("../CSS/Images/lawn.jpg");
 	background-size: cover;
@@ -9,15 +12,35 @@ body {
 }
 h1 {
 	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 40px;
+	color: white;
 }
+
 .go {
+	height: 100px;
+	width: 100px;
 	display: inline-block;
 	margin: 0 auto;
+}
+button {
+	background-color: transparent;
+	background-image: url("../CSS/Images/redbutton.png");
+	background-size: 100px;
+	background-repeat: no-repeat;
+	border: none;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 25px;
+	height: 100px;
+	width: 100px;
 }
 #mybox {
 	display: block;
 	text-align: center;
 	margin: 5px auto;
+	width: 50px;
+	
 }
 table {
 	height: 700px;
@@ -52,7 +75,11 @@ td {
 }
 #timer {
 	display: block;
-	height:50px;
+	height:26px;
 	width: 30%;
-	background-color: lightblue;
+	/*background-color: lightblue;*/
+	font-family: 'Press Start 2P', cursive;
+	font-size: 25px;
+	color: blue;
+	margin: 0 auto;
 }
