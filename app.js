@@ -48,12 +48,14 @@ function clickDiv() {
 				table.appendChild(newdiv);
 				newdiv.addEventListener("click", function() {
 					// alert("newdiv has been clicked");
+					var input = document.getElementById('mybox');
+    				mybox.value = parseInt(mybox.value, 10) + 1;
 					table.removeChild(newdiv);
 				})
 			}
 			generate();
 			// table.removeChild(newdiv);
-		}, 3000);	
+		}, 2000);	
 		// var cellmove = document.getElementById('id6');
 		// celltest.removeChild(test);
 		
