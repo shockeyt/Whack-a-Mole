@@ -32,12 +32,12 @@ function clickDiv() {
 			var numtest =  Math.floor((Math.random() * 25) + 1);
 			var numid = 'id' + String(numtest);
 			var table = document.getElementById(numid);
-			var newdiv = document.createElement("div");
+			var mole = document.createElement("div");
 			var time;
 			function timeStart() {
 				time = setTimeout(function() {
 						// alert("timeout working");
-						table.removeChild(newdiv);
+						table.removeChild(mole);
 					}, 2000);
 				}
 			function timeStop() {
@@ -53,19 +53,19 @@ function clickDiv() {
 				console.log(numid);
 				
 				// var table = document.getElementById(numid);
-				// var newdiv = document.createElement("div");
-				newdiv.setAttribute('id', numid);
-				newdiv.className = 'test';
-				console.log(newdiv);
-				table.appendChild(newdiv);
+				// var mole = document.createElement("div");
+				mole.setAttribute('id', numid);
+				mole.className = 'test';
+				console.log(mole);
+				table.appendChild(mole);
 				timeStart();
 				
-				newdiv.addEventListener("click", function() {
-					// alert("newdiv has been clicked");
+				mole.addEventListener("click", function() {
+					// alert("mole has been clicked");
 					timeStop();
 					var input = document.getElementById('mybox');
     				mybox.value = parseInt(mybox.value, 10) + 1;
-					table.removeChild(newdiv);
+					table.removeChild(mole);
 				})
 				
 			}
@@ -77,7 +77,7 @@ function clickDiv() {
 			// 	alert("timeout working");
 			// }, 1000);
 			// timeout();
-			// table.removeChild(newdiv);
+			// table.removeChild(mole);
 		}, 3000);	
 		// var cellmove = document.getElementById('id6');
 		// celltest.removeChild(test);
