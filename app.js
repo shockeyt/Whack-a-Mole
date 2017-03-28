@@ -18,7 +18,7 @@ var go = document.querySelector('.go');
 //need startGame to engage clickDiv()
 function startGame() {
 	go.addEventListener("click", function() {
-		alert("go button pushed");
+		// alert("go button pushed");
 	})
 }
 startGame();
@@ -33,7 +33,11 @@ function clickDiv() {
 			var numid = 'id' + String(numtest);
 			var table = document.getElementById(numid);
 			var newdiv = document.createElement("div");
-			
+			var timeout = function() {
+					setTimeout(function() {
+						alert("timeout working");
+					}, 1000);
+				}
 			function generate() {
 				// var numtest =  Math.floor((Math.random() * 25) + 1);
 				// var numid = 'id' + String(numtest);
@@ -46,6 +50,8 @@ function clickDiv() {
 				newdiv.className = 'test';
 				console.log(newdiv);
 				table.appendChild(newdiv);
+
+				timeout();
 				newdiv.addEventListener("click", function() {
 					// alert("newdiv has been clicked");
 					var input = document.getElementById('mybox');
@@ -53,9 +59,16 @@ function clickDiv() {
 					table.removeChild(newdiv);
 				})
 			}
+			
+			
 			generate();
+
+			// var timeout = setTimeout(function() {
+			// 	alert("timeout working");
+			// }, 1000);
+			// timeout();
 			// table.removeChild(newdiv);
-		}, 2000);	
+		}, 3000);	
 		// var cellmove = document.getElementById('id6');
 		// celltest.removeChild(test);
 		
