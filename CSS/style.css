@@ -26,6 +26,22 @@ h1 {
 .stop {
 	display: inline;
 }
+.player1 {
+	background-color: white;
+	height: 40px;
+	display: block;
+	float: left;
+	font-size: 25px;
+	width: 30%;
+}
+.player2 {
+	background-color: white;
+	height: 40px;
+	display: block;
+	float: right;
+	font-size: 25px;
+	width: 30%;
+}
 button {
 	background-color: transparent;
 	background-image: url("../CSS/Images/redbutton.png");
