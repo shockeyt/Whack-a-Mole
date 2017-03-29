@@ -23,6 +23,9 @@ h1 {
 	display: inline-block;
 	margin: 0 auto;
 }
+.stop {
+	display: inline;
+}
 button {
 	background-color: transparent;
 	background-image: url("../CSS/Images/redbutton.png");
@@ -40,7 +43,7 @@ button {
 	text-align: center;
 	margin: 5px auto;
 	width: 50px;
-	
+
 }
 table {
 	height: 700px;

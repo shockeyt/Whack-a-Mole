@@ -1,64 +1,56 @@
 console.log("js is working");
 
 
-// var test = document.createElement("div");
-// test.className = "test";
-// console.log(test);
-
-// var celltest = document.getElementById('id1');
-// function addDiv() {
-// 	// var celltest = document.getElementById('id1');
-// 	celltest.appendChild(test);
-// 	console.log(celltest);
-// } 
-// addDiv();
 
 var go = document.querySelector('.go');
-// console.log(go);
-//need startGame to engage clickDiv()
-// function startGame() {
-// 	go.addEventListener("click", function() {
-// 		// alert("go button pushed");
-// 	})
-// }
-// startGame();
+var stop = document.querySelector('.stop');
 
 var timediv = document.querySelector('#timer');
 //countdown timer
-var time = 30;
+var timeclock = 30;
 var t;
 function timer() {
 	t = setTimeout(function() {
-		time --;
-		timediv.innerHTML = time;
+		timeclock --;
+		timediv.innerHTML = timeclock;
 		timer();
 	}, 1000); 
 	timeZero();
 	console.log(timediv);
 }
-function timeZero() {
-	if (time === 0) {
-		alert("times up");
-		stopTime();
-	}
-}
 function stopTime() {
 	clearTimeout(t);
-	time = 30;
+	stopInterval();
+
+	timeclock = 30;
 }
+
+function timeZero() {
+	if (timeclock === 0) {
+		alert("times up");
+		stopTime();
+		// stopInterval();
+		clearInterval(go);
+	}
+}
+
 
 function startGame(){
 			timer();
-			console.log(time);
+			console.log(timeclock);
 		}
 // startGame();
+
+function stopInterval() {
+	clearInterval(go);
+}
 
 function clickDiv() {
 
 	go.addEventListener("click", function() {
 
 		startGame();
-		setInterval(function(){ 
+		var molego = setInterval(function(){ 
 			// celltest.removeChild(test);
 			var numtest =  Math.floor((Math.random() * 25) + 1);
 			var numid = 'id' + String(numtest);
@@ -96,7 +88,7 @@ function clickDiv() {
 					// alert("mole has been clicked");
 					timeStop();
 					var input = document.getElementById('mybox');
-    				mybox.value = parseInt(mybox.value, 10) + 1;
+    				input.value = parseInt(mybox.value, 10) + 1;
 					table.removeChild(mole);
 				})
 				
@@ -105,12 +97,14 @@ function clickDiv() {
 			
 			generate();
 
-			// var timeout = setTimeout(function() {
-			// 	alert("timeout working");
-			// }, 1000);
-			// timeout();
-			// table.removeChild(mole);
-		}, 3000);	
+		stop.addEventListener("click", function() {
+			// alert("stop worked");
+			clearInterval(molego);
+		})	
+
+		}, 3000);
+
+
 		// var cellmove = document.getElementById('id6');
 		// celltest.removeChild(test);
 		
