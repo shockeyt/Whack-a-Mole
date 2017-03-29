@@ -2,6 +2,7 @@ console.log("js is working");
 
 var player1 = document.querySelector('.player1');
 var player2 = document.querySelector('.player2');
+var currentPlayer = 1
 var go = document.querySelector('.go');
 var stop = document.querySelector('.stop');
 var timediv = document.querySelector('#timer');
@@ -32,10 +33,19 @@ function timeZero() {
 		alert("times up");
 		stopTime();
 		gametime = false;	
-		input.value = 0;	
+		input.value = 0;
+		switchPlayer();	
 	}
 }
 
+function switchPlayer() {
+	if (currentPlayer == 1) {
+		currentPlayer++;
+	}
+	else {
+		currentPlayer--;
+	}
+}
 
 function startGame(){
 			timer();
@@ -93,7 +103,12 @@ function clickDiv() {
 					timeStop();
 					
     				input.value = parseInt(mybox.value, 10) + 1;
+    				console.log(currentPlayer);
+    				if (currentPlayer === 1) {
     				player1.innerHTML = input.value;
+    				} else if (currentPlayer === 2) {
+    				player2.innerHTML = input.value;
+    				}
 					table.removeChild(mole);
 				})
 				}
