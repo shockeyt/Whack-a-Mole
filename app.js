@@ -73,7 +73,7 @@ resetButton.addEventListener("click", function() {
 
 //SOUNDS
 var audio4 = document.querySelector('.audio4');
-
+var audio14 = document.querySelector('.audio14');
 
 function timer() {
 	t = setTimeout(function() {
@@ -97,6 +97,7 @@ function timeZero() {
 		// alert("times up");
 		console.log("round is over");
 		container.appendChild(roundOver);
+		audio14.play();
 		stopTime();
 		gametime = false;	
 		// input.value = 0;
