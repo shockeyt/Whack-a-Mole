@@ -91,6 +91,9 @@ table {
 	margin: 0 auto;
 	cursor: url("../CSS/Images/smallmallet.png"), pointer;
 }
+table:active {
+	cursor: url("../CSS/Images/smallmallet2.png"), pointer;
+}
 tr {
 	height: 140px;
 }
