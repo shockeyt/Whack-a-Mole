@@ -36,12 +36,15 @@ function timeZero() {
 		stopTime();
 		gametime = false;	
 		input.value = 0;
+		timediv.innerHTML = timeclock;
 		switchPlayer();	
 	} else if (timeclock === 0 && currentPlayer === 2) {
 		console.log(currentPlayer);
+		console.log("round 2 is over");
 		determineWinner();
 		stopTime();
 		gametime = false;
+		timediv.innerHTML = timeclock;
 	}
 }
 
@@ -89,6 +92,7 @@ function clickDiv() {
 				time = setTimeout(function() {
 						// alert("timeout working");
 						table.removeChild(mole);
+						console.log(time);
 					}, 2000);
 				}
 			function timeStop() {
@@ -101,18 +105,17 @@ function clickDiv() {
 				// var numtest =  Math.floor((Math.random() * 25) + 1);
 				// var numid = 'id' + String(numtest);
 				if (gametime === true) {
-					console.log(timeclock);
-				console.log(numtest);
-				console.log(numid);
+				// 	console.log(timeclock);
+				// console.log(numtest);
+				// console.log(numid);
 				
 				// var table = document.getElementById(numid);
 				// var mole = document.createElement("div");
 				mole.setAttribute('id', numid);
 				mole.className = 'mole';
-				console.log(mole);
+				// console.log(mole);
 				table.appendChild(mole);
-				timeStart()
-				;
+				timeStart();
 				
 				mole.addEventListener("click", function() {
 					// alert("mole has been clicked");
@@ -124,14 +127,14 @@ function clickDiv() {
     					player1score++;
 	    				// player1score = input.value;
 	    				player1.textContent = player1score;
-    				console.log(player1);
+    				// console.log(player1);
     				} else if (currentPlayer === 2) {
     					player2score++;
     					// player2score = input.value;
     					player2.textContent = player2score;
     				// player2.value = input.value;
     				// player2.innerText = input.value;
-    				console.log(player2);
+    				// console.log(player2);
     				}
 					table.removeChild(mole);
 				})
@@ -149,11 +152,11 @@ function clickDiv() {
 			// }
 		
 		
-		stop.addEventListener("click", function() {
-			// alert("stop worked");
-			clearInterval(molego);
-			// timeStop();
-		})	
+		// stop.addEventListener("click", function() {
+		// 	// alert("stop worked");
+		// 	clearInterval(molego);
+		// 	// timeStop();
+		// })	
 
 		}, 3000);
 
