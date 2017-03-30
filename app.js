@@ -24,6 +24,7 @@ function timer() {
 }
 function stopTime() {
 	clearTimeout(t);
+	// clearTimeout(time);
 	stopInterval();
 
 	timeclock = 30;
@@ -37,7 +38,8 @@ function timeZero() {
 		gametime = false;	
 		input.value = 0;
 		timediv.innerHTML = timeclock;
-		switchPlayer();	
+		switchPlayer();
+		clearInterval(molego);	
 	} else if (timeclock === 0 && currentPlayer === 2) {
 		console.log(currentPlayer);
 		console.log("round 2 is over");
@@ -75,25 +77,26 @@ function startGame(){
 function stopInterval() {
 	clearInterval(go);
 }
-
+var time;
+var molego;
 function clickDiv() {
 
 	go.addEventListener("click", function() {
 		gametime = true;
 		startGame();
-		var molego = setInterval(function(){ 
+		molego = setInterval(function(){ 
 			// celltest.removeChild(test);
 			var numtest =  Math.floor((Math.random() * 25) + 1);
 			var numid = 'id' + String(numtest);
 			var table = document.getElementById(numid);
 			var mole = document.createElement("div");
-			var time;
+			
 			function timeStart() {
 				time = setTimeout(function() {
 						// alert("timeout working");
 						table.removeChild(mole);
 						console.log(time);
-					}, 2000);
+					}, 1000);
 				}
 			function timeStop() {
 				clearTimeout(time);
@@ -102,15 +105,12 @@ function clickDiv() {
 			// 	clearTimeout()
 			// }
 			function generate() {
-				// var numtest =  Math.floor((Math.random() * 25) + 1);
-				// var numid = 'id' + String(numtest);
 				if (gametime === true) {
-				// 	console.log(timeclock);
+				// console.log(timeclock);
 				// console.log(numtest);
 				// console.log(numid);
 				
-				// var table = document.getElementById(numid);
-				// var mole = document.createElement("div");
+				
 				mole.setAttribute('id', numid);
 				mole.className = 'mole';
 				// console.log(mole);
@@ -143,23 +143,8 @@ function clickDiv() {
 			
 			
 			generate();
-		
-			// if (timeclock === 0) {
-			// 	alert("gameover!");
-			// 	stopTime();
-			// 	// stopInterval();
-			// 	clearInterval(molego);
-			// }
-		
-		
-		// stop.addEventListener("click", function() {
-		// 	// alert("stop worked");
-		// 	clearInterval(molego);
-		// 	// timeStop();
-		// })	
 
 		}, 3000);
-
 
 	});
 }
