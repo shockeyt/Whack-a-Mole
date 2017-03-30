@@ -89,6 +89,7 @@ button {
 table {
 	height: 700px;
 	margin: 0 auto;
+	cursor: url("../CSS/Images/smallmallet.png"), pointer;
 }
 tr {
 	height: 140px;
@@ -99,23 +100,65 @@ td {
 	width: 120px;
 	height: 120px;
 	/*border: 5px solid black;*/
-
+	overflow: hidden;
 }
 .mole {
 	/*background-color: red;
 	border: 3px solid blue;*/
+	animation: 
+		test 
+		500ms 
+		ease-out
+	    0s
+	    alternate
+	    infinite
+	    none
+	    running;
 	background-image: url("../CSS/Images/mole.png");
 	background-size: 120px;
 	background-repeat: no-repeat;
 	height: 100px;
+	position: absolute;
 	width: 117px;
 	margin: 0 auto;
+	opacity: 1;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+@keyframes test {
+	0% {
+		margin-top: 50px;
+		opacity: 0;
+	}
+	100% {
+		margin-top: 0px
+		opacity: 1;
+	}
+}
+@keyframes testback {
+	100% {
+		margin-top: 0px
+		opacity: 1;
+	}
+	0% {
+		margin-top: 50px;
+		opacity: 0;
+	}
 }
 .molesize {
+	animation: fade 2s linear;
 	background-image: url("../CSS/Images/mole.png");
 	background-size: 120px;
 	background-repeat: no-repeat;
+	/*border: 3px solid black;*/
+	display: block;
 	height: 100px;
+	opacity: 1;
+}
+@keyframes fade {
+	0%,100% {opacity: 0}
+	50% {opacity: 1}
 }
 #timer {
 	display: block;
