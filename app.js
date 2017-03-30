@@ -13,6 +13,24 @@ var timeclock = 30;
 timediv.innerHTML = timeclock;
 var t;
 var gametime;
+//alert DIVs
+var container = document.querySelector('.container');
+var roundOver = document.createElement('div');
+roundOver.className = 'roundOver';
+var timerEnds = document.createElement('h3');
+timerEnds.innerHTML = "ROUND 1 IS OVER";
+roundOver.appendChild(timerEnds);
+var exitbutton = document.createElement('button');
+exitbutton.innerHTML = "OK";
+exitbutton.addEventListener("click", function() {
+	container.removeChild(roundOver);
+})
+roundOver.appendChild(exitbutton);
+// container.appendChild(roundOver);
+
+
+
+
 function timer() {
 	t = setTimeout(function() {
 		timeclock --;
@@ -34,9 +52,10 @@ function timeZero() {
 	if (timeclock === 0 && currentPlayer === 1) {
 		// alert("times up");
 		console.log("round is over");
+		container.appendChild(roundOver);
 		stopTime();
 		gametime = false;	
-		input.value = 0;
+		// input.value = 0;
 		timediv.innerHTML = timeclock;
 		switchPlayer();
 		clearInterval(molego);	
