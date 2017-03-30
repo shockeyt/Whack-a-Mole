@@ -20,7 +20,7 @@ var buttonCondition;
 var roundOver = document.createElement('div');
 roundOver.className = 'roundOver';
 var timerEnds = document.createElement('h3');
-timerEnds.innerHTML = "ROUND 1 IS OVER";
+timerEnds.innerHTML = "PLAYER 2 GO!";
 roundOver.appendChild(timerEnds);
 var exitbutton = document.createElement('button');
 exitbutton.innerHTML = "OK";
@@ -34,7 +34,7 @@ roundOver.appendChild(exitbutton);
 var round2Over = document.createElement('div');
 round2Over.className = 'roundOver';
 var timer2Ends = document.createElement('h3');
-timer2Ends.innerHTML = "ROUND 2 IS OVER";
+timer2Ends.innerHTML = "GAME OVER";
 round2Over.appendChild(timer2Ends);
 var exit2button = document.createElement('button');
 exit2button.innerHTML = "OK";
@@ -48,15 +48,19 @@ round2Over.appendChild(exit2button);
 var winnerdiv = document.createElement('div');
 winnerdiv.className = 'roundOver';
 var player1wins = document.createElement('h3');
+player1wins.className = "winnertext";
 player1wins.innerHTML = "PLAYER 1 WINS!!";
 
 var player2wins = document.createElement('h3');
+player2wins.className = "winnertext";
 player2wins.innerHTML = "PLAYER 2 WINS!!";
 
 var playerDraw = document.createElement('h3');
+playerDraw.className = "winnertext";
 playerDraw.innerHTML = "IT'S A TIE!!";
 
 var resetButton = document.createElement('button');
+resetButton.className = "resetGo";
 resetButton.innerHTML = "RESET";
 resetButton.addEventListener("click", function() {
 	container.removeChild(winnerdiv);
@@ -216,7 +220,7 @@ function clickDiv() {
 			
 			generate();
 
-		}, 3000);
+		}, 2000);
 
 	});
 }
