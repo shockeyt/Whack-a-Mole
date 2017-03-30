@@ -13,6 +13,8 @@ var timeclock = 30;
 timediv.innerHTML = timeclock;
 var t;
 var gametime;
+
+
 //alert DIVs
 var container = document.querySelector('.container');
 var buttonCondition;
@@ -69,7 +71,8 @@ resetButton.addEventListener("click", function() {
 // winnerdiv.appendChild(resetButton);
 // container.appendChild(winnerdiv);
 
-
+//SOUNDS
+var audio4 = document.querySelector('.audio4');
 
 
 function timer() {
@@ -212,6 +215,7 @@ function clickDiv() {
     				// player2.innerText = input.value;
     				// console.log(player2);
     				}
+    				audio4.play();
 					table.removeChild(mole);
 				})
 				}
