@@ -106,23 +106,29 @@ function timeZero() {
 		timediv.innerHTML = timeclock;
 	}
 }
-
+var delayWinMessage;
 function determineWinner() {
 	if (player1score > player2score) {
 		// alert("Player 1 wins!");
+		delayWinMessage = setTimeout(function() {
 		winnerdiv.appendChild(player1wins);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		}, 4000);
 	} else if (player1score < player2score) {
 		// alert("Player 2 wins!");
+		delayWinMessage = setTimeout(function() {
 		winnerdiv.appendChild(player2wins);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		}, 4000);
 	} else {
 		// alert("Draw!");
+		delayWinMessage = setTimeout(function() {
 		winnerdiv.appendChild(playerDraw);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		}, 4000);
 	}
 }
 function switchPlayer() {
