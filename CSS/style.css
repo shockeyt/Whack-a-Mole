@@ -127,7 +127,7 @@ td {
 	color: blue;
 	margin: 0 auto;
 }
-.roundOver {
+.roundOver, .round2Over {
 	border: 5px solid black;
 	height: 300px;
 	background-color: white;

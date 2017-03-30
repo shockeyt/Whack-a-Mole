@@ -15,6 +15,8 @@ var t;
 var gametime;
 //alert DIVs
 var container = document.querySelector('.container');
+var buttonCondition;
+//player 1 round over message
 var roundOver = document.createElement('div');
 roundOver.className = 'roundOver';
 var timerEnds = document.createElement('h3');
@@ -24,9 +26,44 @@ var exitbutton = document.createElement('button');
 exitbutton.innerHTML = "OK";
 exitbutton.addEventListener("click", function() {
 	container.removeChild(roundOver);
+	
 })
 roundOver.appendChild(exitbutton);
-// container.appendChild(roundOver);
+
+//player 2 round over message
+var round2Over = document.createElement('div');
+round2Over.className = 'roundOver';
+var timer2Ends = document.createElement('h3');
+timer2Ends.innerHTML = "ROUND 2 IS OVER";
+round2Over.appendChild(timer2Ends);
+var exit2button = document.createElement('button');
+exit2button.innerHTML = "OK";
+exit2button.addEventListener("click", function() {
+	container.removeChild(round2Over);
+	
+})
+round2Over.appendChild(exit2button);
+
+//winner message
+var winnerdiv = document.createElement('div');
+winnerdiv.className = 'roundOver';
+var player1wins = document.createElement('h3');
+player1wins.innerHTML = "PLAYER 1 WINS!!";
+
+var player2wins = document.createElement('h3');
+player2wins.innerHTML = "PLAYER 2 WINS!!";
+
+var playerDraw = document.createElement('h3');
+playerDraw.innerHTML = "IT'S A TIE!!";
+
+var resetButton = document.createElement('button');
+resetButton.innerHTML = "RESET";
+resetButton.addEventListener("click", function() {
+	container.removeChild(winnerdiv);
+	location.reload();
+})
+// winnerdiv.appendChild(resetButton);
+// container.appendChild(winnerdiv);
 
 
 
@@ -62,6 +99,7 @@ function timeZero() {
 	} else if (timeclock === 0 && currentPlayer === 2) {
 		console.log(currentPlayer);
 		console.log("round 2 is over");
+		container.appendChild(round2Over);
 		determineWinner();
 		stopTime();
 		gametime = false;
@@ -71,11 +109,20 @@ function timeZero() {
 
 function determineWinner() {
 	if (player1score > player2score) {
-		alert("Player 1 wins!");
+		// alert("Player 1 wins!");
+		winnerdiv.appendChild(player1wins);
+		winnerdiv.appendChild(resetButton);
+		container.appendChild(winnerdiv);
 	} else if (player1score < player2score) {
-		alert("Player 2 wins!");
+		// alert("Player 2 wins!");
+		winnerdiv.appendChild(player2wins);
+		winnerdiv.appendChild(resetButton);
+		container.appendChild(winnerdiv);
 	} else {
-		alert("Draw!");
+		// alert("Draw!");
+		winnerdiv.appendChild(playerDraw);
+		winnerdiv.appendChild(resetButton);
+		container.appendChild(winnerdiv);
 	}
 }
 function switchPlayer() {
