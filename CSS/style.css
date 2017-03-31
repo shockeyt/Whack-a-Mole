@@ -110,10 +110,10 @@ button.resetGo {
 table {
 	height: 700px;
 	margin: 0 auto;
-	cursor: url("../CSS/Images/smallmallet.png"), pointer;
+	cursor: url("../CSS/Images/8bit hammer small.png"), pointer;
 }
 table:active {
-	cursor: url("../CSS/Images/smallmallet2.png"), pointer;
+	cursor: url("../CSS/Images/8bit hammer small2.png"), pointer;
 }
 tr {
 	height: 140px;
@@ -149,7 +149,10 @@ td {
 	overflow: hidden;
 	padding-left: 10px;
 }
-
+.mole:active {
+	background-image: url("../CSS/Images/explosion.png");
+	background-size: 120px;
+}
 @keyframes test {
 	0% {
 		margin-top: 50px;
