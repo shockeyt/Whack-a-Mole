@@ -4,6 +4,16 @@
 
 ![](wireframe.jpg)
 
+# Instructions
+
+Player 1 hits the GO button to start the round.  Each round has 30 seconds on the clock.  When the clock stops, the round is over.  Player 2 hits GO to start round 2.  After both rounds are completed, a winning score will be shown.
+Whack-a-mole can be reset using the reset button at the end of gameplay.
+
+Scoring:
+A recorded 'hit' on a mole removes it from the board and scores a point for the current player.  After 2 rounds, the player with the most points wins.  There is also a tie possibility.
+
+
+
 # Monday
 
 Started on the building the basic boilerplate of the game.  I want to build a table for the grid that the 'holes' will be on since a real whack a mole game is similar to a grid.  This time I'm building a td field for the cells instead of a th field (did that on tic-tac-toe).
@@ -22,7 +32,7 @@ Made an input field that records the clicks on the mole event listener.  Those c
 
 Found the setTimeout function that allows for the moles to disappear if not clicked.  I have that running every 2 seconds.  Also changed my divs to actual 'mole' pngs and added some styling for gameboard and holes.  
 
-Challenge: trying to setup a simple countdown clock (timer).  The main sites I'm looking at are too complicated and involve dates.  Talked with Trey on how he built a simple countdown clock.  Have that running now, but it doesn't affect the game so far.
+Challenge: trying to setup a simple countdown clock (timer).  The main sites I'm looking at are too complicated and involve dates.  Talked with Troy on how he built a simple countdown clock.  Have that running now, but it doesn't affect the game so far.
 
 Did some CSS stying for the go button and h1 title.
 
@@ -67,3 +77,10 @@ Centered the moles in the holes so they look more like they're actually coming o
 SOUNDS!!  Added sounds for hitting a mole, timer, go button, round messages, and winner message.
 
 Added an explosion animation when moles get hit.
+
+# Friday
+
+Organized and commented html, CSS, and JS pages for better reading.
+
+Changed the mole picture to an 8-bit mole.  Alex helped me remove the background layer to make it a transparent png.
+

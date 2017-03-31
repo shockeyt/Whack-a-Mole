@@ -1,8 +1,9 @@
 console.log("js is working");
 
+//GLOBAL VARS
 var player1 = document.querySelector('.player1');
 var player2 = document.querySelector('.player2');
-var currentPlayer = 1
+var currentPlayer = 1;
 var go = document.querySelector('.go');
 var stop = document.querySelector('.stop');
 var timediv = document.querySelector('#timer');
@@ -29,7 +30,7 @@ exitbutton.innerHTML = "OK";
 exitbutton.addEventListener("click", function() {
 	container.removeChild(roundOver);
 	
-})
+});
 roundOver.appendChild(exitbutton);
 
 //player 2 round over message
@@ -43,7 +44,7 @@ exit2button.innerHTML = "OK";
 exit2button.addEventListener("click", function() {
 	container.removeChild(round2Over);
 	
-})
+});
 round2Over.appendChild(exit2button);
 
 //winner message
@@ -67,7 +68,7 @@ resetButton.innerHTML = "RESET";
 resetButton.addEventListener("click", function() {
 	container.removeChild(winnerdiv);
 	location.reload();
-})
+});
 // winnerdiv.appendChild(resetButton);
 // container.appendChild(winnerdiv);
 
@@ -77,6 +78,8 @@ var audio14 = document.querySelector('.audio14');
 var achievement = document.querySelector('.achievement');
 var navigate = document.querySelector('.navigate');
 var point = document.querySelector('.point');
+
+//TIMER FUNCTIONS
 
 function timer() {
 	t = setTimeout(function() {
@@ -120,6 +123,7 @@ function timeZero() {
 	}
 }
 var delayWinMessage;
+
 function determineWinner() {
 	if (player1score > player2score) {
 		// alert("Player 1 wins!");
@@ -128,7 +132,7 @@ function determineWinner() {
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
 		achievement.play();
-		}, 4000);
+		}, 3000);
 	} else if (player1score < player2score) {
 		// alert("Player 2 wins!");
 		delayWinMessage = setTimeout(function() {
@@ -136,7 +140,7 @@ function determineWinner() {
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
 		achievement.play();
-		}, 4000);
+		}, 3000);
 	} else {
 		// alert("Draw!");
 		delayWinMessage = setTimeout(function() {
@@ -144,7 +148,7 @@ function determineWinner() {
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
 		achievement.play();
-		}, 4000);
+		}, 3000);
 	}
 }
 function switchPlayer() {
@@ -167,6 +171,9 @@ function stopInterval() {
 }
 var time;
 var molego;
+
+//GAME START PROCESS
+
 function clickDiv() {
 
 	go.addEventListener("click", function() {
@@ -227,7 +234,7 @@ function clickDiv() {
     				}
     				audio4.play();
 					table.removeChild(mole);
-				})
+				});
 				}
 			}
 			
