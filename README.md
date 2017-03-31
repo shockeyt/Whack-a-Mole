@@ -84,3 +84,8 @@ Organized and commented html, CSS, and JS pages for better reading.
 
 Changed the mole picture to an 8-bit mole.  Alex helped me remove the background layer to make it a transparent png.
 
+Reversed 8 bit hammer to face left.  Makes the cursor more accurate when hitting moles.
+
+Uploaded game to github pages.
+
+
