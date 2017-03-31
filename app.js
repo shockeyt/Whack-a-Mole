@@ -74,6 +74,7 @@ resetButton.addEventListener("click", function() {
 //SOUNDS
 var audio4 = document.querySelector('.audio4');
 var audio14 = document.querySelector('.audio14');
+var achievement = document.querySelector('.achievement');
 
 function timer() {
 	t = setTimeout(function() {
@@ -108,6 +109,7 @@ function timeZero() {
 		console.log(currentPlayer);
 		console.log("round 2 is over");
 		container.appendChild(round2Over);
+		audio14.play();
 		determineWinner();
 		stopTime();
 		gametime = false;
@@ -122,6 +124,7 @@ function determineWinner() {
 		winnerdiv.appendChild(player1wins);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		achievement.play();
 		}, 4000);
 	} else if (player1score < player2score) {
 		// alert("Player 2 wins!");
@@ -129,6 +132,7 @@ function determineWinner() {
 		winnerdiv.appendChild(player2wins);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		achievement.play();
 		}, 4000);
 	} else {
 		// alert("Draw!");
@@ -136,6 +140,7 @@ function determineWinner() {
 		winnerdiv.appendChild(playerDraw);
 		winnerdiv.appendChild(resetButton);
 		container.appendChild(winnerdiv);
+		achievement.play();
 		}, 4000);
 	}
 }
