@@ -75,12 +75,15 @@ resetButton.addEventListener("click", function() {
 var audio4 = document.querySelector('.audio4');
 var audio14 = document.querySelector('.audio14');
 var achievement = document.querySelector('.achievement');
+var navigate = document.querySelector('.navigate');
+var point = document.querySelector('.point');
 
 function timer() {
 	t = setTimeout(function() {
 		timeclock --;
 		timediv.innerHTML = timeclock;
 		timer();
+		navigate.play();
 	}, 1000); 
 	timeZero();
 	// console.log(timeclock);
@@ -168,6 +171,7 @@ function clickDiv() {
 
 	go.addEventListener("click", function() {
 		gametime = true;
+		point.play();
 		startGame();
 		molego = setInterval(function(){ 
 			// celltest.removeChild(test);
