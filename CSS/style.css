@@ -8,14 +8,16 @@ body {
 }
 .container {
 	margin: 0 auto;
+	margin-bottom: 20px;
 	text-align: center;
 	width: 80%;
 }
 /*TOP SECTION*/
 .header {
-	height: 240px;
+	height: 220px;
 	margin: 0 auto;
-	width: 800px;
+	padding-bottom: 5px;
+	width: 670px;
 }
 .maintitle {
 	padding-top: 20px;
@@ -24,7 +26,7 @@ body {
 h1 {
 	color: white;
 	font-family: 'Press Start 2P', cursive;
-	font-size: 55px;
+	font-size: 48px;
 	text-align: center;
 	text-shadow: 8px 8px 2px black;
 }
@@ -46,10 +48,11 @@ h2 {
 	display: block;
 	float: left;
 	font-family: 'Press Start 2P', cursive;
-	font-size: 25px;
-	height: 83px;
+	font-size: 21px;
+	height: 75px;
+	margin-left: 40px;
 	margin-top: 35px;
-	max-width: 230px;
+	max-width: 215px;
 	padding-top: 0px;
 	width: 30%;
 }
@@ -61,10 +64,11 @@ h2 {
 	display: block;
 	float: right;
 	font-family: 'Press Start 2P', cursive;
-	font-size: 25px;
-	height: 83px;
+	font-size: 21px;
+	height: 75px;
+	margin-right: 40px;
 	margin-top: 35px;
-	max-width: 230px;
+	max-width: 215px;
 	padding-top: 0px;
 	width: 30%;
 }
@@ -75,7 +79,7 @@ h2 {
 }
 .player1, .player2 {
 	color: blue;
-	font-size: 30px;
+	font-size: 25px;
 	margin-top: 7px;
 	text-shadow: 4px 2px 2px black;
 }
@@ -111,19 +115,20 @@ button.resetGo {
 /*GAMEBOARD*/
 table {
 	cursor: url("../CSS/Images/8bit hammer small.png"), pointer;
-	height: 700px;
+	height: 500px;
 	margin: 0 auto;
 }
 table:active {
 	cursor: url("../CSS/Images/8bit hammer small2.png"), pointer;
 }
 tr {
-	height: 140px;
+	height: 100px;
 }
 td {
 	background-image: url("../CSS/Images/dirt-hole.png");
-	background-size: cover;
-	height: 120px;
+	background-size: 110px;
+	background-repeat: no-repeat;
+	height: 80px;
 	/*border: 5px solid black;*/
 	overflow: hidden;
 	width: 120px;
@@ -142,12 +147,12 @@ td {
 	    running;
 	background-image: url("../CSS/Images/Mega_Mole2.png");
 	background-repeat: no-repeat;
-	background-size: 120px;
+	background-size: 70px;
 	height: 100px;
 	margin: 0 25px;
 	opacity: 1;
 	overflow: hidden;
-	padding-left: 10px;
+	padding-left: 2px;
 	position: absolute;
 	width: 117px;
 	
@@ -191,7 +196,7 @@ td {
 	color: blue;
 	display: block;
 	font-family: 'Press Start 2P', cursive;
-	font-size: 35px;
+	font-size: 30px;
 	height:40px;
 	margin: 0 auto;
 	text-shadow: 4px 2px 2px black;
@@ -210,7 +215,7 @@ td {
 	margin: 0 auto;
 	position: absolute;
 	right: 0;
-	top: 360px;
+	top: 285px;
 	width: 500px;
 }
 h3 {
