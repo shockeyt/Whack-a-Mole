@@ -1,251 +1,251 @@
 /*GLOBAL STYLES*/
 * {
-	font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 body {
-	background-image: url("../CSS/Images/lawn.jpg");
-	background-size: cover;
+  background-image: url("../CSS/Images/lawn.jpg");
+  background-size: cover;
 }
 .container {
-	margin: 0 auto;
-	margin-bottom: 20px;
-	text-align: center;
-	/*width: 80%;*/
-	width: 675px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  /*width: 80%;*/
+  width: 675px;
 }
 /*TOP SECTION*/
 .header {
-	height: 220px;
-	margin: 0 auto;
-	padding-bottom: 5px;
-	padding-right: 10px;
-	width: 670px;
+  height: 220px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  width: 670px;
 }
 /*TITLE DIV*/
 .maintitle {
-	padding-top: 20px;
+  padding-top: 20px;
 }
 /*WHACK A MOLE TITLE*/
 h1 {
-	color: white;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 48px;
-	text-align: center;
-	text-shadow: 8px 8px 2px black;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 8px 8px 2px black;
 }
 /*PLAYER TITLES*/
 h2 {
-	padding-top: 5px;
+  padding-top: 5px;
 }
 /*START BUTTON*/
 .go {
-	display: inline-block;
-	height: 100px;
-	margin: 7px auto;
-	width: 100px;
+  display: inline-block;
+  height: 100px;
+  margin: 7px auto;
+  width: 100px;
 }
 /*PLAYER 1 DIV*/
 .name1 {
-	background-color: white;
-	border: 5px solid black;
-	box-shadow: 8px 8px 2px black;
-	display: block;
-	float: left;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 21px;
-	height: 75px;
-	margin-left: 40px;
-	margin-top: 35px;
-	max-width: 215px;
-	padding-top: 0px;
-	width: 30%;
+  background-color: white;
+  border: 5px solid black;
+  box-shadow: 8px 8px 2px black;
+  display: block;
+  float: left;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 21px;
+  height: 75px;
+  margin-left: 40px;
+  margin-top: 35px;
+  max-width: 215px;
+  padding-top: 0px;
+  width: 30%;
 }
 /*PLAYER 2 DIV*/
 .name2 {
-	background-color: white;
-	border: 5px solid black;
-	border: 5px solid black;
-	box-shadow: 8px 8px 2px black;
-	display: block;
-	float: right;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 21px;
-	height: 75px;
-	margin-right: 40px;
-	margin-top: 35px;
-	max-width: 215px;
-	padding-top: 0px;
-	width: 30%;
+  background-color: white;
+  border: 5px solid black;
+  border: 5px solid black;
+  box-shadow: 8px 8px 2px black;
+  display: block;
+  float: right;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 21px;
+  height: 75px;
+  margin-right: 40px;
+  margin-top: 35px;
+  max-width: 215px;
+  padding-top: 0px;
+  width: 30%;
 }
 /*PLAYER 1 AND 2 BOXES*/
 .title1, .title2 {
-	border-bottom: 5px solid black;
-	height: 33px;
-	margin: 0 auto;
+  border-bottom: 5px solid black;
+  height: 33px;
+  margin: 0 auto;
 }
 /*PLAYER 1 AND 2 SCORES*/
 .player1, .player2 {
-	color: blue;
-	font-size: 25px;
-	margin-top: 7px;
-	text-shadow: 4px 2px 2px black;
+  color: blue;
+  font-size: 25px;
+  margin-top: 7px;
+  text-shadow: 4px 2px 2px black;
 }
 /*RED BUTTON STYLES*/
 button {
-	background-color: transparent;
-	background-image: url("../CSS/Images/redbutton.png");
-	background-repeat: no-repeat;
-	background-size: 100px;
-	border: none;
-	color: white;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 25px;
-	height: 100px;
-	width: 100px;
+  background-color: transparent;
+  background-image: url("../CSS/Images/redbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  border: none;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  height: 100px;
+  width: 100px;
 }
 /*RESET BUTTON STYLES*/
 button.resetGo {
-	background-color: transparent;
-	background-image: url("../CSS/Images/blackbutton.png");
-	background-repeat: no-repeat;
-	background-size: 160px;
-	border: none;
-	height: 163px;
-	width: 165px;
+  background-color: transparent;
+  background-image: url("../CSS/Images/blackbutton.png");
+  background-repeat: no-repeat;
+  background-size: 160px;
+  border: none;
+  height: 163px;
+  width: 165px;
 }
 
 /*#mybox {
-	display: block;
-	margin: 5px auto;
-	text-align: center;
-	width: 50px;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  width: 50px;
 
 }*/
 
 /*GAMEBOARD*/
 table {
-	cursor: url("../CSS/Images/8bit hammer small.png"), pointer;
-	height: 500px;
-	margin: 0 auto;
+  cursor: url("../CSS/Images/8bit hammer small.png"), pointer;
+  height: 500px;
+  margin: 0 auto;
 }
 /*HAMMER MOVEMENT*/
 table:active {
-	cursor: url("../CSS/Images/8bit hammer small2.png"), pointer;
+  cursor: url("../CSS/Images/8bit hammer small2.png"), pointer;
 }
 /*TABLE ROWS*/
 tr {
-	height: 100px;
+  height: 100px;
 }
 /*TABLE CELLS*/
 td {
-	background-image: url("../CSS/Images/dirt-hole.png");
-	background-size: 110px;
-	background-repeat: no-repeat;
-	height: 80px;
-	/*border: 5px solid black;*/
-	overflow: hidden;
-	width: 120px;
+  background-image: url("../CSS/Images/dirt-hole.png");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  height: 80px;
+  /*border: 5px solid black;*/
+  overflow: hidden;
+  width: 120px;
 }
 /*MOLE STYLING*/
 .mole {
-	/*background-color: red;
-	border: 3px solid blue;*/
-	animation: 
-		test 
-		500ms 
-		ease-out
-	    0s
-	    alternate
-	    infinite
-	    none
-	    running;
-	background-image: url("../CSS/Images/Mega_Mole2.png");
-	background-repeat: no-repeat;
-	background-size: 70px;
-	height: 100px;
-	margin: 0 25px;
-	opacity: 1;
-	overflow: hidden;
-	padding-left: 2px;
-	position: absolute;
-	width: 117px;
+  /*background-color: red;
+  border: 3px solid blue;*/
+  animation: 
+	test 
+	500ms 
+	ease-out
+	0s
+	alternate
+	infinite
+	none
+	running;
+  background-image: url("../CSS/Images/Mega_Mole2.png");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  height: 100px;
+  margin: 0 25px;
+  opacity: 1;
+  overflow: hidden;
+  padding-left: 2px;
+  position: absolute;
+  width: 117px;
 	
 }
 /*MOLE EXPLOSION*/
 .mole:active {
-	background-image: url("../CSS/Images/explosion.png");
-	background-size: 100px;
-	height: 100px;
-	margin: 0 auto;
-	padding-left: 2px;
+  background-image: url("../CSS/Images/explosion.png");
+  background-size: 100px;
+  height: 100px;
+  margin: 0 auto;
+  padding-left: 2px;
 }
 /*MOLE ANIMATION*/
 @keyframes test {
-	0% {
-		margin-top: 50px;
-		opacity: 0;
-	}
-	100% {
-		margin-top: 0px
-		opacity: 1;
-	}
+  0% {
+	  margin-top: 50px;
+	  opacity: 0;
+  }
+  100% {
+	  margin-top: 0px
+	  opacity: 1;
+  }
 }
 @keyframes testback {
-	100% {
-		margin-top: 0px
-		opacity: 1;
-	}
-	0% {
-		margin-top: 50px;
-		opacity: 0;
-	}
+  100% {
+	  margin-top: 0px
+	  opacity: 1;
+  }
+  0% {
+	  margin-top: 50px;
+	  opacity: 0;
+  }
 }
 /*TEST MOLE STYLING
 .molesize {
-	background-image: url("../CSS/Images/mole.png");
-	background-repeat: no-repeat;
-	background-size: 120px;
-	height: 100px;
-	margin: 0 auto;
-	opacity: 1;
-	overflow: hidden;
-	position: absolute;
-	width: 117px;
+  background-image: url("../CSS/Images/mole.png");
+  background-repeat: no-repeat;
+  background-size: 120px;
+  height: 100px;
+  margin: 0 auto;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  width: 117px;
 }*/
 /*COUNTDOWN CLOCK*/
 #timer {
-	color: blue;
-	display: block;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 30px;
-	height:40px;
-	margin: 0 auto;
-	text-shadow: 4px 2px 2px black;
-	width: 30%;
+  color: blue;
+  display: block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  height:40px;
+  margin: 0 auto;
+  text-shadow: 4px 2px 2px black;
+  width: 30%;
 }
 /*ALERT MESSAGES*/
 .roundOver, .round2Over {
-	background-color: white;
-	border: 5px solid black;
-	box-shadow: 8px 8px 2px black;
-	color: red;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 40px;
-	height: 300px;
-	left: 0;
-	margin: 0 auto;
-	position: absolute;
-	right: 0;
-	top: 285px;
-	width: 500px;
+  background-color: white;
+  border: 5px solid black;
+  box-shadow: 8px 8px 2px black;
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  height: 300px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 285px;
+  width: 500px;
 }
 /*TEXT WITHIN ALERTS*/
 h3 {
-	margin-top: 90px;
-	padding-bottom: 30px;
+  margin-top: 90px;
+  padding-bottom: 30px;
 }
 /*WINNER TEXT*/
 h3.winnertext {
-	margin-top: 45px;
-	padding-bottom: 0px;
+  margin-top: 45px;
+  padding-bottom: 0px;
 }
